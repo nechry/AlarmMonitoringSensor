@@ -1,9 +1,34 @@
 /*
-This is a monitoring system for home alarm control panel, base on mySensors 
-I use Light Sensors to monitor alarm: operation mode, trigger, is bell is activated, and if need maintenance.
-The LEDs have tree states, Off, blink and On
-
-Written by Nechry nechry@gmail.com, May 2015.
+  Alarm Monitoring Sensor (powered by mySensors on a Arduino Nano)
+  By: Jean-Francois Auger
+  Contact: nechry@gmail.com
+  License: GNU LGPL 2.1+
+  https://github.com/nechry/AlarmMonitoringSensor/
+ 
+  Purpose:
+ 
+  This is a monitoring system for home alarm control panel, base on mySensors 
+  I use Light Sensors to monitor alarm leds: 
+    operation mode, 
+	trigger, 
+	bell is activated, 
+	maintenance.
+  The LEDs have tree states, Off, blink and On
+ 
+  INPUT:
+  Pin 3, 4, 5 and 6 for led sensor.
+  OUTPUT:
+  Pin 8 and 7 to report the current operation mode.
+  
+  NRF24L01+:
+  See http://www.mysensors.org/build/connect_radio for more details
+  9	    CE	
+  10	CSN/CS
+  13	SCK
+  11	MOSI
+  12	MISO
+  2	    IRQ
+  
 */
 
 #include <SPI.h>
